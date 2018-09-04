@@ -1,10 +1,9 @@
 <template>
   <div class="container">
-      <div class="row">
-          <div class="col-sm-12">
-              <h1>{{ msg }}</h1>
-          </div>
-      </div>
+
+      <TitleBar msg="Unbedingt erledigen!"/>
+
+      <!-- form group -->
       <div class="row">
           <div class="col-md-6">
               <form>
@@ -22,9 +21,14 @@
                   </div>
               </form>
           </div>
+
+          <!-- Todo group -->
           <div class="col-md-6">
+              <div v-if="entry.length < 1" class="alert alert-warning">
+                  <p><strong>Hinweis:</strong> Keine Daten vorhanden!</p>
+              </div>
               <ul class="list-group">
-                  <li class="list-group-item" v-for="(element, index) in entry">
+                  <li class="list-group-item" v-for="(element, index) in entry" v-bind:key="index">
                       <div class="row">
                           <div class="col-md-8">
                               <p :class="{ 'done' : element.addDone }"><strong>{{ element.title }}</strong>: {{ element.todo }}</p>
@@ -34,7 +38,6 @@
                               <button @click="deleteItem(index)" class="btn btn-danger" type="button" name="delete">x</button>
                           </div>
                       </div>
-
                   </li>
               </ul>
           </div>
@@ -44,11 +47,11 @@
 </template>
 
 <script>
+
+import TitleBar from './TitleBar.vue';
+
 export default {
     name: 'TodoForm',
-    props: {
-        msg: String
-    },
     data() {
         return {
             entry : [],
@@ -71,6 +74,9 @@ export default {
         deleteItem(index) {
             this.entry.splice(index, 1);
         }
+    },
+    components : {
+        TitleBar
     }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <TodoForm msg="Unbedingt erledigen!" />
+        <TodoForm  />
     </div>
 </template>
 
