@@ -1,15 +1,25 @@
 <template>
     <div id="app">
-        <TodoForm  />
+        <div class="container">
+
+            <TodoTitle msg="Hallo Leute" />
+
+            <TodoForm />
+
+
+        </div>
     </div>
 </template>
 
 <script>
-import TodoForm from './components/TodoForm.vue'
+
+import TodoTitle from './components/TodoTitle.vue';
+import TodoForm from './components/TodoForm.vue';
 
 export default {
     name: 'app',
     components: {
+        TodoTitle,
         TodoForm
     }
 }
