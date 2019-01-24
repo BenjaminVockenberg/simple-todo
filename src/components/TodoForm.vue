@@ -60,7 +60,9 @@
 <script>
 
 export default {
+    
     name: 'TodoForm',
+    
     data() {
         
         return {
@@ -104,15 +106,17 @@ export default {
             this.entry.splice(index, 1);
         }
     }
-
 }
+
 </script>
 
 <style scoped lang="scss">
 .done {
     text-decoration: line-through;
 }
+
 .error {
     border: 1px solid rgb( 255, 0, 0 );
 }
+
 </style>

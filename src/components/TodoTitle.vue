@@ -14,11 +14,13 @@
 
 export default {
     name: 'TodoTitle',
+
     data() {
         return {
             edit : false
         }
     },
+
     methods: {
         /**
         * @name toggleEdit()
@@ -28,8 +30,10 @@ export default {
             this.edit = !this.edit;
         }
     },
+
     props: {
         msg: String
     }
+    
 }
 </script>
