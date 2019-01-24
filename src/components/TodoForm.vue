@@ -45,7 +45,7 @@
                             <p>{{ element.todo }}</p>
                         </div>
                         <div class="col-md-4">
-                            <button @click="element.addDone = !element.addDone" class="btn btn-success" type="button">{{element.addDone ? 'undone' : 'done'}}</button>&nbsp;
+                            <button @click="element.addDone = !element.addDone" class="btn btn-success" type="button">{{ element.addDone ? 'undone' : 'done' }}</button>&nbsp;
                             <button @click="deleteItem(index)" class="btn btn-danger" type="button" name="delete">x</button>
                         </div>
                     </div>
@@ -62,6 +62,7 @@
 export default {
     name: 'TodoForm',
     data() {
+        
         return {
             entry : [],
             touched: false,
@@ -96,7 +97,7 @@ export default {
 
         /**
         * @name deleteItem(index)
-        * @param index {number}
+        * @param index { number }
         * @desc deletes a specific item from the entries array
         */
         deleteItem(index) {
