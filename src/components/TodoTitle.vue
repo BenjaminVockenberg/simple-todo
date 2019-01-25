@@ -25,7 +25,7 @@ export default {
     props: {
         msg: {
             type: String,
-            default: 'hi'
+            default: 'Another ToDo-List'
         }
     },
 
