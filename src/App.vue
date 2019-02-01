@@ -1,12 +1,12 @@
 <template>
-    <div id="app">
-        <div class="container">     
+    <section id="app" class="section">
+        <div class="container">
 
         <!-- Component TodoForm -->
         <TodoForm />
 
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -23,9 +23,6 @@ export default {
 </script>
 
 <style lang="scss">
-
-//! Importing Bootstrap from node_modules
-@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 #app {
     font-family: sans-serif;
