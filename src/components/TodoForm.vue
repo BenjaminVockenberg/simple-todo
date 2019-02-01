@@ -1,7 +1,7 @@
 <template>
     <!-- form group -->
-    <div class="row">
-        <div class="col-md-6">
+    <div class="columns">
+        <div class="column">
             <form>
                 <div class="form-group">
                     <label>Todo
@@ -64,7 +64,7 @@
     </div>
 
     <!-- Todo group -->
-    <div class="col-md-6">
+    <div class="column">
         <!-- Component TodoTitle -->
         <TodoTitle msg="Hallo Leute"/>
         <div v-if="entry.length < 1" class="alert alert-warning">
@@ -87,15 +87,15 @@
                         <p>{{ element.todo }}</p>
                     </div>
                     <div class="col-md-4">
-                        <button
+                        <a
                             class="btn btn-success"
                             type="button"
                             @click="element.addDone = !element.addDone"
                         >
                             {{ element.addDone ? 'undone' : 'done' }}
-                        </button>&nbsp;
+                        </a>&nbsp;
                         <button
-                            class="btn btn-danger"
+                            class="button"
                             type="button"
                             name="delete"
                             @click="deleteItem(index)"

@@ -9,8 +9,7 @@ module.exports = {
   ],
   rules: {
     'no-console': 'off',
-    'no-debugger': 'off',
-    'indent': ['4', 'error']
+    'no-debugger': 'off'
   },
   parserOptions: {
     parser: 'babel-eslint'
